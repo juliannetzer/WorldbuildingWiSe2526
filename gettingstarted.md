@@ -15,8 +15,8 @@ Please also install the following packages:
 
 ## Activate License
 
-Next get the free personal license: 
-In the UnityHub go to licenses: 
+Next get the free personal license.
+In the UnityHub go to licenses -> Add license
 ![](images/UnityInstall3.jpeg)
 
 ->  Click on "Get a free personal license"  
