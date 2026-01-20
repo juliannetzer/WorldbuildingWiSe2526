@@ -1,5 +1,56 @@
 # Session 1
 
+# <a name="whatis">What is Unity? 
+
+Unity is a tool for creating interactive experiences. It allows designers and artists to turn visual ideas, spaces, and objects into systems that react to users in real time. Instead of focusing on static images or pre-rendered animations, Unity is about interaction, movement, and behavior.
+
+While tools like Blender are used to design and model visual elements, Unity is the place where these elements are staged, combined, and activated. In Unity, designers work with scenes, cameras, light, time, and interaction—similar to building a spatial composition that can be explored, played, or experienced.
+
+Unity is widely used not only for games, but also for digital art, installations, simulations, and experimental projects that sit between design, technology, and performance.
+
+### What Unity can do
+
+Unity is good at real-time, interactive systems.
+
+Unity can…
+- Create interactive experiences
+- Games (2D, 3D)
+- Installations
+- Simulations
+- VR / AR experiences
+- Prototypes and playable concepts
+- Work in real time
+- Immediate visual feedback
+- Dynamic lighting and movement
+- Interaction while the scene is running
+- Handle behavior and logic
+- User input (keyboard, mouse, controller, touch)
+- States, triggers, events
+- Physics (gravity, collisions)
+- Simple AI and agent behavior
+- Stage and compose spaces
+- Scenes, cameras, light
+- Spatial relationships
+- Timing, rhythm, flow
+- Integrate many media (3D models, images, video, sound,Assets from Blender, Photoshop, etc.)
+- Build and export applications (Windows, macOS, Linux, Web (WebGL), Mobile, VR headsets, ...) 
+
+### What Unity cannot (or should not) do
+
+Unity is not a universal design tool.
+
+Unity cannot…
+- Replace creation tools
+	- No proper 3D modeling (→ Blender)
+	- No image editing (→ Photoshop)
+	- No sound editing (→ Audition, Reaper)
+	- No layout or typography tools (→ InDesign, Figma)
+
+- Replace offline rendering -> No high-end cinematic rendering like Blender Cycles
+- Limited control over frame-by-frame image perfection
+- Work well for print
+- Automatically support collaboration -> Collaboration must be planned and structured
+
 
 # <a name="editor">Working with the Unity Editor
 
@@ -138,12 +189,13 @@ To work with transparency you can either select a shaders that directly supports
 
 Also make sure to change the Transparency-Setting when importing your texture/image: 
 ![](images/shader5.jpeg)
- 
+
+## Textures
+
 ## Places to get free Textures: 
 - [Polyhaven](https://polyhaven.com/textures)
 - [Unity Asset Store](https://assetstore.unity.com/?category=2d%2Ftextures-materials&free=true&orderBy=1)
 - [AmbientCG](https://ambientcg.com/)
-- [Ponzu (AI generated Textures)](https://www.ponzu.gg)
 
 ### Settings for Polyhaven: 
 
@@ -160,24 +212,47 @@ Conversion Table for using Polyhaven Materials:
 | Height Map       | Displacement|
 | Occlusion Map    | AO          |
 
-# <a name="terrain"></a>Terrain Tool  
-![](images/terraintools.jpeg)
-With the Terrain Tool, you can very easily create landscapes and add vegetation. 
+## Checking the Import settings
 
-To create a Terrain go to: GameObject -> 3D Object -> Terrain 
+1. Select the file
+In the Project window, click once on the imported file (for example a texture or a 3D model).
 
-To now change the height of the Terrain select the Terrain and select the Raise or Lower Terrain Brush: 
-![](images/terrain1.jpeg)
+2. Look at the Inspector
+On the right side of the Unity interface, you will see the Inspector.
+This panel shows the Import Settings of the selected file.
+![](images/importsettings.jpeg)
 
-To Paint a Texture select the "Paint Texture" Brush: 
-![](images/terrain2.jpeg)
-Then create a new Layer and choose a texture:  
-![](images/terrain3.jpeg)
-And select with which Layer you want to draw: 
-![](images/terrain4.jpeg)
 
-You can find a good tutorial here: 
-[How to build beautiful landscapes in Unity using Terrain Tools | Tutorial](https://www.youtube.com/watch?v=smnLYvF40s4)
+3. Check the important options: 
+
+- Alpha is Transparency turned on, when you work with transparency
+- When you don't work with square images: Advanced -> Non-Power of 2 -> None
+> Square textures (for example 512×512 or 1024×1024 pixels) work best in Unity because they are more efficient for real-time rendering. Unity and graphics hardware are optimized for these sizes, which helps improve performance and avoids technical issues. However, non-square textures can also be used if needed.
+
+4. Apply changes
+If you change any setting, always click Apply at the bottom of the Inspector.
+Otherwise, Unity will not update the file.
+
+## Importing your own textures into Unity
+
+1. Prepare the texture
+Create your texture in an external tool such as Photoshop, GIMP, or Substance Painter.
+It is recommended to use a square texture (e.g. 512×512, 1024×1024, 2048×2048 pixels), as this works best with real-time rendering and performance.
+Save the file as PNG or JPG (PNG is recommended for transparency).
+
+2. Import into Unity
+Drag the image file into the Assets folder of your Unity project.
+Unity will automatically import the texture.
+
+3. Check the import settings
+Select the texture in the Project window and adjust the settings in the Inspector (Texture Type, Max Size, Compression), then click Apply.
+
+4. Create or assign a material
+Create a Material and drag the texture into the Albedo / Base Map slot.
+
+5. Apply to an object
+Drag the material onto a 3D object in the Scene or Hierarchy to see the texture in real time.
+
 
 # <a name="3dassets"></a> Working with imported 3D Assets
 ![](images/assets.jpeg)
@@ -339,10 +414,29 @@ Then you can drag and drop the image that you imported in the cubemap area.
 
 Now you can use the skybox in the lighting settings. 
 
+# <a name="terrain"></a>Terrain Tool  
+![](images/terraintools.jpeg)
+With the Terrain Tool, you can very easily create landscapes and add vegetation. 
+
+To create a Terrain go to: GameObject -> 3D Object -> Terrain 
+
+To now change the height of the Terrain select the Terrain and select the Raise or Lower Terrain Brush: 
+![](images/terrain1.jpeg)
+
+To Paint a Texture select the "Paint Texture" Brush: 
+![](images/terrain2.jpeg)
+Then create a new Layer and choose a texture:  
+![](images/terrain3.jpeg)
+And select with which Layer you want to draw: 
+![](images/terrain4.jpeg)
+
+You can find a good tutorial here: 
+[How to build beautiful landscapes in Unity using Terrain Tools | Tutorial](https://www.youtube.com/watch?v=smnLYvF40s4)
+
 
 ## <a name="workingtogether">Working together with Unity 
 
-To work together in Unity you can either work from on file (e.g. on an external drive) or you can split the work: Person 1 works on the world, Person 2 on the character. 
+To work together in Unity you can either work from on file (e.g. on an external drive) or you can split the work: Person 1 works on the world, Person 2 on the models/materials etc. 
 
 To merge project the easiest way is to work in one main project and then create packages to transfer your Objects or files. 
 

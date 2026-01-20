@@ -4,6 +4,7 @@
 - [Getting Started](gettingstarted.md)
 - [Session 1](session1.md)
 	- [Examples](examples.md)
+	- [What is Unity?](session1.md#whatis)
 	- [Working with the Unity Editor](session1.md#editor)
 	- [Structuring your project](session1.md#structure)
 	- [Basic 3D Objects](session1.md#basic3d)	
