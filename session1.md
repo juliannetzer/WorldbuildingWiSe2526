@@ -187,7 +187,7 @@ You can find the shaders by clicking on:
 To work with transparency you can either select a shaders that directly supports transcparency (e.g. Unlit -> Transparency) or you can change the render setting of your shader, in case of the Lit shader like this: 
 ![](images/shader4.jpeg)
 
-Also make sure to change the Transparency-Setting when importing your texture/image: 
+Also make sure to change the Transparency-Setting when importing your texture/image (see also in "Checking the Import settings")
 ![](images/shader5.jpeg)
 
 ## Textures
@@ -220,7 +220,7 @@ In the Project window, click once on the imported file (for example a texture or
 2. Look at the Inspector
 On the right side of the Unity interface, you will see the Inspector.
 This panel shows the Import Settings of the selected file.
-![](images/importsettings.jpeg)
+![](images/importsettings2.jpeg)
 
 
 3. Check the important options: 
@@ -259,17 +259,39 @@ Drag the material onto a 3D object in the Scene or Hierarchy to see the texture 
 
 Most of the times the 3D-Assets are generated outside of Unity and then imported into the project.
 
-To import Assets into your project, just drag and drop them into the "project"/Assets-window
+**Supported 3D File Formats**
 
-Supported file formats: 
-- .fbx (usually works best) 
-- .obj 
-- .dae
-- .3ds
-- .dxf
+Unity supports various 3D model formats, including:
 
-Note: you can also use other file formats (link .blend etc. if the corresponding software is installed but i wouldn't recommend it) 
+- FBX (.fbx) – Recommended for compatibility and animation support.
+- OBJ (.obj) – Common for static models but does not support animations.
+- GLTF/GLB (.gltf, .glb) – Optimized for web and real-time rendering.
+- Unity-native files – Blender (.blend) files can be imported directly, but it is recommended to export them as FBX for better control.
 
+**Importing Assets into Unity**
+
+There are multiple ways to import 3D assets into your Unity project:
+Method 1: Drag and Drop (Quick and Easy)
+
+- Open the Project Window in Unity.
+- Locate the Assets folder (or a subfolder like Models if you have one).
+- Drag your 3D model file from your file explorer (Windows/Mac) directly into the Assets window.
+- The asset will now appear in your Unity project and can be placed in a scene.
+
+Method 2: Using the Unity Import Menu (For Better Control)
+
+- In Unity, go to Assets → Import New Asset...
+- Select the 3D model file you want to import.
+- Click Import to add the asset to your project.
+
+**Adjusting Import Settings**
+
+Once imported, select the 3D model in the Project Window, and check the Inspector panel to adjust settings such as:
+
+- Scale Factor – Ensures the model is properly scaled in Unity.
+- Normals & Tangents – Controls how lighting interacts with the model.
+- Materials & Textures – Ensures textures are correctly applied if they were included in the export. (details in the section Troubleshooting below)
+- Rig & Animation Settings – If the model includes a rig or animations, configure them under the Rig and Animation tabs. (we will have a look at this in session 2)
 [Unity Documentation on file formats](https://docs.unity3d.com/2020.1/Documentation/Manual/3D-formats.html)
 
 
