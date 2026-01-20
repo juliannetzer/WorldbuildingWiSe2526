@@ -1,5 +1,7 @@
 # Session 1
 
+Before we start: Download the [Example Assets](Assets/AssetsSession1.zip)
+
 # <a name="whatis">What is Unity? 
 
 Unity is a tool for creating interactive experiences. It allows designers and artists to turn visual ideas, spaces, and objects into systems that react to users in real time. Instead of focusing on static images or pre-rendered animations, Unity is about interaction, movement, and behavior.
