@@ -1,6 +1,6 @@
 # Session 1
 
-Before we start: Download the [Example Assets](Assets/AssetsSession1.zip)
+Before we start: [Download the Example Assets](http://juliannetzer.de/worldbuilding@bbk/AssetsSession1.zip)
 
 # <a name="whatis">What is Unity? 
 
