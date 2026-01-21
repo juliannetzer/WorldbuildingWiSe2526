@@ -322,7 +322,13 @@ To use the Everything Models:
 3. Create a new material -> Drag and Drop the shader on this Material
 4. Apply this material to the everything Model in your scene 
 
-##  <a name="onlinetools"></a> Online Sculpting Tools
+#  <a name="onlinetools"></a> Online Sculpting Tools
+
+### Womp 
+
+![](images/womp.jpeg)
+Womp is a browser-based 3D modeling tool designed to make 3D creation approachable for beginners and designers—no installs required. It focuses on fast, real-time “digital clay” style modeling (including its Goop/liquid modeling approach) and supports workflows that go from quick concepting to 3D-printable results. Womp also offers AI-assisted starting points (e.g., text/image-to-3D via Womp Spark) and lets you export common 3D formats such as OBJ, STL, GLTF, FBX, and more—so you can continue in tools like Blender or bring assets into Unity.
+
 
 ### SculptGL 
 ![](images/sculptgl.jpeg)
@@ -361,10 +367,6 @@ Then find your extracted .zip-file and open the "package.json"-file.
 
 Now you should be able to open the models from Lumalabs.
 
-### Hyper3D 
-![](images/hyper3d.jpeg)
-An AI-powered 3D model generator that creates 3D assets from text and images.
-- [Hyper3D - Rodin](https://hyper3d.ai/)
 
 ## Troubleshooting
 
