@@ -324,6 +324,24 @@ Once imported, select the 3D model in the Project Window, and check the Inspecto
 [Unity Documentation on file formats](https://docs.unity3d.com/2020.1/Documentation/Manual/3D-formats.html)
 
 
+## Install .glb Plugin	
+When you download .glb-Files you need to install a plugin first: 
+
+Go to https://github.com/Siccity/GLTFUtility and click on "Code" -> "Download ZIP"
+![](images/glb1.jpeg)
+
+Then extract and .zip-file and go back to Unity. Click on "Window" -> "Package Manager"
+![](images/glb2.jpeg)
+
+Click on the + and select "Add package from disk"
+![](images/glb3.jpeg)
+
+Then find your extracted .zip-file and open the "package.json"-file. 
+![](images/glb4.jpeg)
+
+Now you should be able to open the models from Lumalabs.
+
+
 ## Best places to get free 3D-Assets 
 
 - [Unity Asset Store](https://assetstore.unity.com/?category=3d%2Fenvironments&free=true&orderBy=1): Large library of assets, specifically for unity, sometimes with animations 
@@ -383,26 +401,12 @@ Two apps that work on mobile phones:
 
 ## AI Tools
 
-### Lumalabs Genie
-![](images/lumalabsgenie.jpeg)
+### Fast3D
+![](images/fast3d.jpeg)
 A platform designed to generate 3D models from text and images.
-[Link](https://lumalabs.ai/genie?view=create)
+You can Download them as a .obj File. 
+[Link](https://fast3d.io)
 
-## Install .glb Plugin	
-Since Lumalabs uses the .glb-fileformat we have to install a plugin in Unity first, for this follow these steps: 
-Go to https://github.com/Siccity/GLTFUtility and click on "Code" -> "Download ZIP"
-![](images/glb1.jpeg)
-
-Then extract and .zip-file and go back to Unity. Click on "Window" -> "Package Manager"
-![](images/glb2.jpeg)
-
-Click on the + and select "Add package from disk"
-![](images/glb3.jpeg)
-
-Then find your extracted .zip-file and open the "package.json"-file. 
-![](images/glb4.jpeg)
-
-Now you should be able to open the models from Lumalabs.
 
 
 ## Troubleshooting
