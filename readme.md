@@ -14,6 +14,21 @@
 	- [Photogrammetry](session1.md#3dscan)
 	- [Lighting the Scene](session1.md#light)
 	- [Working together in Unity](session1.md#workingtogether)
+- Session 2
+	- Camera & Game Window
+	- Visual Effects & Global Volume
+	- Audio
+	- Video
+	- Animation
+	- Characters
+- Session 3
+	- Interaction in Unity
+	- Coding in Unity
+		- Creating a new script
+		- Working with ChatGPT & Claude
+	- Example Code Snippets
+	- Recording
+<!-----	
 - [Session 2](session2.md)
 	- [Camera & Game Window](session2.md#camera)
 	- [Visual Effects & Global Volume](session2.md#visualeffects)
@@ -27,4 +42,5 @@
 		- [Creating a new script](session3.md#newscript)
 		- [Working with ChatGPT & Claude](session3.md#llm)
 	- [Example Code Snippets](session3.md#examples)
-	- [Recording](session3.md#Recording)---->
+	- [Recording](session3.md#Recording)
+	------>
