@@ -14,13 +14,15 @@
 	- [Photogrammetry](session1.md#3dscan)
 	- [Lighting the Scene](session1.md#light)
 	- [Working together in Unity](session1.md#workingtogether)
-- Session 2
-	- Camera & Game Window
-	- Visual Effects & Global Volume
-	- Audio
-	- Video
-	- Animation
-	- Characters
+- [Session 2](session2.md)
+	- [Skybox](session2.md#skybox)
+	- [Terrain Tool](session2.md#terrain)
+	- [Camera & Game Window](session2.md#camera)
+	- [Visual Effects & Global Volume](session2.md#visualeffects)
+	- [Audio](session2.md#audio)
+	- [Video](session2.md#video)
+	- [Animation](session2.md#animation)
+	- [Extra: Characters](session2.md#characters)
 - Session 3
 	- Interaction in Unity
 	- Coding in Unity
@@ -29,13 +31,7 @@
 	- Example Code Snippets
 	- Recording
 <!-----	
-- [Session 2](session2.md)
-	- [Camera & Game Window](session2.md#camera)
-	- [Visual Effects & Global Volume](session2.md#visualeffects)
-	- [Audio](session2.md#audio)
-	- [Video](session2.md#video)
-	- [Animation](session2.md#animation)
-	- [Characters](session2.md#characters)
+
 - [Session 3](session3.md)
 	- Interaction in Unity
 	- [Coding in Unity](session3.md#Coding)

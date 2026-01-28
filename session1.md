@@ -455,51 +455,6 @@ You can also change parameters like intensity, color etc. when you select the li
 
 
 
-## Skyboxes 
-A Skybox is a panoramic background that surrounds your entire scene, simulating the appearance of a distant environment, such as a sky, stars, or a landscape. It's implemented as a textured sphere or cube that wraps around the scene and serves as both a visual backdrop and a source of ambient lighting. By using a Skybox, you can easily change the atmosphere and lighting of your scene.
-
-To use a skybox go the lighting window (Window -> Rendering -> Lighting) and select the skybox material: 
-![](images/skyboxlighting.jpeg)
-
-(Note: You have to click on "Generate Lighting" and your Objects need to be static)
-
-Best places to find skyboxes: 
-- [Polyhaven](https://polyhaven.com/hdris)
-- [Unity Asset Store](https://assetstore.unity.com/2d/textures-materials/sky)
-
-### Importing a skybox (from Polyhaven)
-Download the skybox as .exr (i would recommend 4k resolution, if you wanna see the skybox in the background, if not 1k should be enough). 
-
-Import to Assets, then select the image in the Project Window and go to the inspector and select texture shape -> 
-![](images/importsettings.jpeg)
-
-Then create a material (Assets -> Create -> Material) go the inspector and search for "Cubemap" in the shader dropdown. 
-![](images/skyboxmaterial.jpeg)
-
-Then you can drag and drop the image that you imported in the cubemap area. 
-![](images/skyboxmaterial2.jpeg)
-
-Now you can use the skybox in the lighting settings. 
-
-# <a name="terrain"></a>Terrain Tool  
-![](images/terraintools.jpeg)
-With the Terrain Tool, you can very easily create landscapes and add vegetation. 
-
-To create a Terrain go to: GameObject -> 3D Object -> Terrain 
-
-To now change the height of the Terrain select the Terrain and select the Raise or Lower Terrain Brush: 
-![](images/terrain1.jpeg)
-
-To Paint a Texture select the "Paint Texture" Brush: 
-![](images/terrain2.jpeg)
-Then create a new Layer and choose a texture:  
-![](images/terrain3.jpeg)
-And select with which Layer you want to draw: 
-![](images/terrain4.jpeg)
-
-You can find a good tutorial here: 
-[How to build beautiful landscapes in Unity using Terrain Tools | Tutorial](https://www.youtube.com/watch?v=smnLYvF40s4)
-
 
 ## <a name="workingtogether">Working together with Unity 
 
