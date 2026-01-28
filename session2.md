@@ -1,4 +1,4 @@
-Before we start: [Download the Example Assets](http://juliannetzer.de/Downloads/AssetsSession2.zip)
+Before we start: [Download the Example Assets](https://juliannetzer.de/downloads/AssetsSession2.zip)
 
 
 # <a name="skybox"></a>Skyboxes 
