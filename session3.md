@@ -1,3 +1,34 @@
+# <a name="Recording"></a>Recording 
+
+##  Install Recorder
+- In the top menu go to: Window → Package Manager
+- In the Package Manager: Click the dropdown at the top left and select "Unity Registry". 
+- Search for "Recorder".
+- Select Unity Recorder from the list and click "Install".
+![](images/record1.jpeg)
+
+
+## Record 
+- Once installed, go to: Window → General → Recorder → Recorder Window
+- The Recorder Window will open, where you can set up your recording.
+
+- In the Recorder Window, click the “+ Add New Recorder” button. Choose the recording type: Movie: For standard video files (like MP4).
+
+- Configure the Recording Settings like this: 
+![](images/record2.jpeg)
+
+- If the resolution 4K is too much, so can set it to FHD - 1080p.
+- Make sure that the movie file gets saved outside your Unity folder! 
+
+- When you now click the Play Button Unity will record your scene. 
+
+>You can also change the Recording Mode: 
+>   - Manual: Start and stop recording manually.
+>   - Frame Interval: Record from specific frames (e.g., frames 0–300).
+>   - Time Interval: Record for a set time (e.g., 10 seconds).
+
+> You can also find more detailled instruction how to use advanced camera movements here: [Unity Cinemachine Introduction](https://github.com/juliannetzer/wise2223_worldbuilding_unity/blob/main/session2.md#cinemachine)
+
 # <a name="Coding"></a>Coding in Unity 
 
 In Unity, scripts with the programming language C# are used to control the behavior of GameObjects. Scripts interact with objects by modifying their properties, responding to player input, or handling game logic. Each script is typically attached to a GameObject as a component, allowing it to influence that object.
@@ -89,7 +120,7 @@ transform.position = new Vector3(0, 2, 0);
 
 ## <a name="newscript"></a>Creating a new script
 
-To create a script select Assets -> Create -> C# Script and select a name (please use a name that describes the function in our case "HelloWorld"). 
+To create a script select Assets -> Create -> C# Script and select a name (please use a name that describes the function in our case "PositionToColor"). 
 ![](images/script2.jpeg)
 
 Then double click on the script in the project window, this should open Visual Studio Code with the script opened: 
@@ -99,29 +130,36 @@ Now we can copy & paste our code:
 ```
 using UnityEngine;
 
-public class HelloWorld : MonoBehaviour
+public class PositionToColor : MonoBehaviour
 {
+    private Renderer rend;
 
     void Start()
     {
-        Debug.Log("Hello World!");
+        rend = GetComponent<Renderer>();
+    }
+
+    void Update()
+    {
+        Vector3 p = transform.position;
+
+        float r = Mathf.InverseLerp(-10f, 10f, p.x);
+        float g = Mathf.InverseLerp(-10f, 10f, p.y);
+        float b = Mathf.InverseLerp(-10f, 10f, p.z);
+
+        rend.material.color = new Color(r, g, b);
     }
 }
 ```
 
 In Unity, a script needs to be attached to a GameObject to function properly because of how Unity’s architecture is designed. Unity follows a component-based architecture, where behaviors and properties are added to GameObjects through components—and scripts are one of those components.
 
-So we will create an empty GameObject called "HelloWorld", for this go to GameObject -> Create Empty.
+So we will create an 3D Cube called "ChangeColor", for this go to GameObject -> 3D Object -> Cube.
 
-When we created the GameObject we can either drag and drop our script on the GameObject or we can select the GameObject and click on "Add Component" and search for our "Hello World"-Script: 
-![](images/script4.jpeg)
+When we created the GameObject we can either drag and drop our script on the GameObject or we can select the GameObject and click on "Add Component" and search for our "Change Color To Red"-Script. 
 
-Then we can start the Play Mode and should now see a "Hello World" in the console window: 
-![](images/script5.jpeg)
+When you now press Play, you should see that the Cube Color changes to Red
 
-> Debug.Log() is a function in Unity used to print messages to the Console window. It helps you track what’s happening in your code—like checking variable values, confirming if certain code runs, or identifying errors.
-
-> The Console window in Unity displays: Log messages (from Debug.Log), Warnings (highlighted in yellow), Errors (highlighted in red). You can find it by going to Window → General → Console. It's useful for: See if your code is running as expected or to find out where bugs or errors are happening.
 
 ## Public Variables & Unity Editor
 
@@ -464,45 +502,3 @@ It has to behaviours implemented:
 11. Adjust "Track Distance" to set how far it can detect the target
 12. Adjust "Reached Distance" to set how close it needs to get
 
-
-# <a name="Recording"></a>Recording 
-
-##  Install Recorder
-- In the top menu go to: Window → Package Manager
-- In the Package Manager: Click the dropdown at the top left and select "Unity Registry". 
-- Search for "Recorder".
-- Select Unity Recorder from the list and click "Install".
-![](images/record1.jpeg)
-
-
-## Record 
-- Once installed, go to: Window → General → Recorder → Recorder Window
-- The Recorder Window will open, where you can set up your recording.
-
-- In the Recorder Window, click the “+ Add New Recorder” button. Choose the recording type: Movie: For standard video files (like MP4).
-
-- Configure the Recording Settings like this: 
-![](images/record2.jpeg)
-
-- If the resolution 4K is too much, so can set it to FHD - 1080p.
-- Make sure that the movie file gets saved outside your Unity folder! 
-
-- When you now click the Play Button Unity will record your scene. 
-
->You can also change the Recording Mode: 
->   - Manual: Start and stop recording manually.
->   - Frame Interval: Record from specific frames (e.g., frames 0–300).
->   - Time Interval: Record for a set time (e.g., 10 seconds).
-
-> You can also find more detailled instruction how to use advanced camera movements here: [Unity Cinemachine Introduction](https://github.com/juliannetzer/wise2223_worldbuilding_unity/blob/main/session2.md#cinemachine)
-
-# <a name="Recording"></a> Lighting extra: Fog
-![](images/fog1.jpeg)
-To add fog go to Window -> Rendering -> Lighting. 
-In the Environment you can now find the Fog Settings: 
-![](images/fog2.jpeg)
-
-You can see that you now only see the fog on the GameObjects in the Scene not the environment itself:
-![](images/fog3.jpeg)
-To change this you can color the background of the camera in the same color, for this select your camera and change the background settings to the same color as your fog: 
-![](images/fog4.jpeg)
