@@ -154,11 +154,11 @@ public class PositionToColor : MonoBehaviour
 
 In Unity, a script needs to be attached to a GameObject to function properly because of how Unity’s architecture is designed. Unity follows a component-based architecture, where behaviors and properties are added to GameObjects through components—and scripts are one of those components.
 
-So we will create an 3D Cube called "ChangeColor", for this go to GameObject -> 3D Object -> Cube.
+So we will create an 3D cube called "ChangeColor", for this go to GameObject -> 3D Object -> Cube. Now position the cube at the position 0/0/0.
 
-When we created the GameObject we can either drag and drop our script on the GameObject or we can select the GameObject and click on "Add Component" and search for our "Change Color To Red"-Script. 
+When we created the GameObject we can either drag and drop our script on the GameObject or we can select the GameObject and click on "Add Component" and search for our "PositionToColor"-Script. 
 
-When you now press Play, you should see that the Cube Color changes to Red
+When you now press Play, you should see that the Cube Color changes according to its position.
 
 
 ## Public Variables & Unity Editor
@@ -311,6 +311,8 @@ So either try to generate a script that turns on a light when the character come
 > - the object gets bigger or smaller when the player approaches 
 > - the object changes to a random color when the player gets close.
 > - when the player approaches, the object creates a clone nearby
+
+> Another good way to code with AI support is to use Co-Pilot directly in Visual Studio Code. You can find a good (and very short) introduction here: [Co-Pilot in Visual Studio](https://www.youtube.com/watch?v=jXp5D5ZnxGM)
 
 ## Best practices
 
